@@ -18,7 +18,7 @@ def pdf_to_txt(pdf_file, txt_file):
       txt_writer.write(text)#writes down the data
 
 if __name__ == "__main__":
-  pdf_file = "Lecture1.pdf"
+  pdf_file = "input.pdf"
   txt_file = "output.txt"
 
   pdf_to_txt(pdf_file, txt_file)
