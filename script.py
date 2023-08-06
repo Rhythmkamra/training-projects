@@ -1,26 +1,17 @@
-import PyPDF2
-# python library to work with pdf 
+import pywhatkit
 
-def pdf_to_txt(pdf_file, txt_file):
-#   function takes two arguments
-#   path of the pdf file to be converted
-#   path  of the txt file to be saved
-  
+def send_whatsapp_message(phone_number, message, time_hour, time_minute):
+  """Sends an automatic WhatsApp message to the specified phone number at the specified time.
 
-  pdf_reader = PyPDF2.PdfReader(pdf_file)
-  #reads the file
-  num_pages = len(pdf_reader.pages)
-  #counts the number of pages
+  Args:
+    phone_number: The phone number of the recipient.
+    message: The message to send.
+    time_hour: The hour of the scheduled time.
+    time_minute: The minute of the scheduled time.
+  """
 
-  with open(txt_file, "w") as txt_writer:#open the file in write mode
-    for page in range(num_pages):#iterates over lines in the pdf
-      text = pdf_reader.pages[page].extract_text()#text variable stores the data
-      txt_writer.write(text)#writes down the data
+  pywhatkit.sendwhatmsg(phone_number, message, time_hour, time_minute)
 
 if __name__ == "__main__":
-  pdf_file = "input.pdf"
-  txt_file = "output.txt"
-
-  pdf_to_txt(pdf_file, txt_file)
-
-  print("PDF file converted to TXT file successfully!")
+  
+  send_whatsapp_message("+919115628099", "Hello! neuloo  This is an automatic message.", 7, 30)
