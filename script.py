@@ -1,7 +1,7 @@
 import pywhatkit
 
-def send_whatsapp_message(phone_number, message, time_hour, time_minute):
-  """Sends an automatic WhatsApp message to the specified phone number at the specified time.
+def send_message(phone_number, message, time_hour, time_minute):
+  """
 
   Args:
     phone_number: The phone number of the recipient.
@@ -14,4 +14,4 @@ def send_whatsapp_message(phone_number, message, time_hour, time_minute):
 
 if __name__ == "__main__":
   
-  send_whatsapp_message("+91**********", "This is an automatic message.", 7, 30)
+  send_message("+91**********", "This is an automatic message.", 7, 30)
