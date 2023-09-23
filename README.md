@@ -1,4 +1,6 @@
 # Activity Record Software
+![Screenshot from 2023-09-23 12-28-16](https://github.com/Rhythmkamra/training-projects/assets/110007876/729f3b63-6e59-4e4c-92f5-85eaddb7d6db)
+
 
 ## Overview
 
